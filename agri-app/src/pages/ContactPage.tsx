@@ -64,19 +64,19 @@ const ContactPage: React.FC = () => {
             <Card.Body>
               <div className="mb-3">
                 <h6>📧 Email</h6>
-                <p className="mb-0">support@agriconnect.com</p>
+                <p className="mb-0">support@farmtotech.com</p>
               </div>
               <div className="mb-3">
                 <h6>📞 Phone</h6>
-                <p className="mb-0">+1 (555) 123-4567</p>
+                <p className="mb-0">+84 382 705 884</p>
               </div>
               <div className="mb-3">
                 <h6>📍 Address</h6>
-                <p className="mb-0">123 Farm Street<br />Agriculture City, AC 12345</p>
+                <p className="mb-0">address APT<br />Quy Nhon, Binh Dinh</p>
               </div>
               <div>
                 <h6>🕒 Hours</h6>
-                <p className="mb-0">Monday - Friday: 9AM - 6PM<br />Saturday: 10AM - 4PM</p>
+                <p className="mb-0">Monday - Saturday: 8AM - 5PM<br />Sunday: 8AM - 11AM</p>
               </div>
             </Card.Body>
           </Card>

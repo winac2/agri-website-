@@ -1,12 +1,12 @@
 import type { Product, User, Review, Category } from '../types';
-
+//dont wonder why the ship place are in US, me just pick random
 export const mockCategories: Category[] = [
   {
     id: '1',
     name: 'Fruits',
     description: 'Fresh seasonal fruits from local farms',
     icon: '🍎',
-    productCount: 25
+    productCount: 21
   },
   {
     id: '2',
@@ -437,19 +437,20 @@ export const mockProducts: Product[] = [
   // Seasonal Category
   {
     id: '22',
-    name: 'Pumpkins',
-    description: 'Fresh seasonal pumpkins. Perfect for carving, cooking, or decoration.',
+    name: 'bia gừng',
+    description: 'bia gừng nhập khẩu bán ở Hội An',
     price: 8.99,
     category: 'seasonal',
-    images: ['https://images.unsplash.com/photo-1502920514313-52541402a659?w=400'],
+    // images: ['https://images.unsplash.com/photo-1502920514313-52541402a659?w=400'],
+    images: ['https://wineandfood.vn/image/cache/catalog/anh-san-pham/nuoc-giai-khat/nuoc-trai-cay/bia-gung-khong-duong-royalty-330ml-600x600.jpg'],
     farmerId: 'farmer10',
     farmerName: 'Harvest Moon Farm',
     stock: 30,
-    unit: 'piece',
+    unit: 'can',
     rating: 4.5,
     reviewCount: 17,
     isOrganic: false,
-    isSeasonal: true,
+    isSeasonal: false,
     shippingArea: ['California', 'Oregon', 'Washington'],
     createdAt: new Date('2024-01-15')
   },
@@ -477,7 +478,7 @@ export const mockProducts: Product[] = [
     description: 'Sweet, refreshing watermelons. Perfect for hot summer days and picnics.',
     price: 12.99,
     category: 'seasonal',
-    images: ['https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400'],
+    images: ['https://drive.google.com/thumbnail?id=1J6CRstZJZ_GFELESO83XhRJDMooErq3f'],
     farmerId: 'farmer2',
     farmerName: 'Sunny Fields',
     stock: 15,

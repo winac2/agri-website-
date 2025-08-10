@@ -23,40 +23,40 @@ const Footer: React.FC = () => {
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Quick Links</h6>
             <ul className="list-unstyled">
-              <li><Link to="/" className="text-muted text-decoration-none">Home</Link></li>
-              <li><Link to="/category/fruits" className="text-muted text-decoration-none">Fruits</Link></li>
-              <li><Link to="/category/vegetables" className="text-muted text-decoration-none">Vegetables</Link></li>
-              <li><Link to="/category/organic" className="text-muted text-decoration-none">Organic</Link></li>
+              <li><Link to="/" className="text-success">Home</Link></li>
+              <li><Link to="/category/fruits" className="text-success">Fruits</Link></li>
+              <li><Link to="/category/vegetables" className="text-success">Vegetables</Link></li>
+              <li><Link to="/category/organic" className="text-success">Organic</Link></li>
             </ul>
           </Col>
           
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Account</h6>
             <ul className="list-unstyled">
-              <li><Link to="/login" className="text-muted text-decoration-none">Login</Link></li>
-              <li><Link to="/signup" className="text-muted text-decoration-none">Sign Up</Link></li>
-              <li><Link to="/profile" className="text-muted text-decoration-none">Profile</Link></li>
-              <li><Link to="/orders" className="text-muted text-decoration-none">Orders</Link></li>
+              <li><Link to="/login" className="text-success">Login</Link></li>
+              <li><Link to="/signup" className="text-success">Sign Up</Link></li>
+              <li><Link to="/profile" className="text-success">Profile</Link></li>
+              <li><Link to="/orders" className="text-success">Orders</Link></li>
             </ul>
           </Col>
           
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Support</h6>
             <ul className="list-unstyled">
-              <li><Link to="/contact" className="text-muted text-decoration-none">Contact Us</Link></li>
-              <li><a href="#" className="text-muted text-decoration-none">Help Center</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Shipping Info</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Returns</a></li>
+              <li><Link to="/contact" className="text-success">Contact Us</Link></li>
+              <li><a href="#" className="text-success">Help Center</a></li>
+              <li><a href="#" className="text-success">Shipping Info</a></li>
+              <li><a href="#" className="text-success">Returns</a></li>
             </ul>
           </Col>
           
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Legal</h6>
             <ul className="list-unstyled">
-              <li><a href="#" className="text-muted text-decoration-none">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Terms of Service</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Cookie Policy</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">GDPR</a></li>
+              <li><a href="#" className="text-success">Privacy Policy</a></li>
+              <li><a href="#" className="text-success">Terms of Service</a></li>
+              <li><a href="#" className="text-success">Cookie Policy</a></li>
+              <li><a href="#" className="text-success">GDPR</a></li>
             </ul>
           </Col>
         </Row>
@@ -65,12 +65,12 @@ const Footer: React.FC = () => {
         
         <Row className="align-items-center">
           <Col md={6}>
-            <p className="mb-0 text-muted">
+            <p className="text-success">
               © 2025 Farm to tech. All rights reserved.
             </p>
           </Col>
           <Col md={6} className="text-md-end">
-            <p className="mb-0 text-muted">
+            <p className="text-success">
               Made to support farmers
             </p>
           </Col>

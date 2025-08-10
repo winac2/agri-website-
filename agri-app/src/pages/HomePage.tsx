@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
                 src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600" 
                 alt="Fresh produce" 
                 className="img-fluid rounded w-100" 
-                style={{maxWidth: '400px', height: 'auto' }}
+                style={{maxWidth: '600px', height: 'auto' }}
               />
             </div>
           </div>
