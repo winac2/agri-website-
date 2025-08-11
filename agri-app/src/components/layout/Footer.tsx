@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
             <h6 className="mb-3">Quick Links</h6>
             <ul className="list-unstyled">
               <li><Link to="/" className="text-success">Home</Link></li>
-              <li><Link to="/category/fruits" className="text-success">Fruits</Link></li>
-              <li><Link to="/category/vegetables" className="text-success">Vegetables</Link></li>
-              <li><Link to="/category/organic" className="text-success">Organic</Link></li>
+              <li><Link to="/category/thuc-pham" className="text-success">Thực phẩm</Link></li>
+              <li><Link to="/category/trai-cay" className="text-success">Trái cây</Link></li>
+              <li><Link to="/category/dac-san-kho" className="text-success">Đặc sản khô</Link></li>
             </ul>
           </Col>
           

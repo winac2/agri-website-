@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Badge, Table } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 
 const OrderManagementPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');

@@ -1,5 +1,27 @@
 {
-  "dependencies": {
-    "gh-pages": "^6.3.0"
-  }
+  "name": "farm-to-tech",
+  "version": "1.0.0",
+  "description": "Farm to Tech - Agricultural Marketplace",
+  "scripts": {
+    "build": "cd agri-app && npm install && npm run build",
+    "start": "cd agri-app && npm run preview",
+    "dev": "cd agri-app && npm run dev",
+    "install-deps": "cd agri-app && npm install"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-repository-url"
+  },
+  "keywords": [
+    "agriculture",
+    "marketplace",
+    "react",
+    "typescript",
+    "vite"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }

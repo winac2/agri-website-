@@ -24,12 +24,12 @@ const Navbar: React.FC = () => {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="Categories" id="categories-dropdown">
-              <NavDropdown.Item as={Link} to="/category/fruits">Fruits</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/vegetables">Vegetables</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/grains">Grains</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/dairy">Dairy</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/organic">Organic</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/seasonal">Seasonal</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/thực phẩm">Thực phẩm</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/đặc sản khô">Đặc sản khô</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/thảo dược">Thảo dược</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/đồ gia dụng">Đồ gia dụng</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/trái cây">Trái cây</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/sản phẩm tái chế">Sản phẩm tái chế</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>

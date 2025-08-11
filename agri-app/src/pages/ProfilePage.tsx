@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Form, Button, Nav, Tab } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button, Nav } from 'react-bootstrap';
 
 const ProfilePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('profile');
@@ -61,23 +61,23 @@ const ProfilePage: React.FC = () => {
                       <Col md={6}>
                         <Form.Group className="mb-3">
                           <Form.Label>First Name</Form.Label>
-                          <Form.Control type="text" defaultValue="John" />
+                          <Form.Control type="text" defaultValue="Vanguard" />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="mb-3">
                           <Form.Label>Last Name</Form.Label>
-                          <Form.Control type="text" defaultValue="Doe" />
+                          <Form.Control type="text" defaultValue="The" />
                         </Form.Group>
                       </Col>
                     </Row>
                     <Form.Group className="mb-3">
                       <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" defaultValue="john@example.com" />
+                      <Form.Control type="email" defaultValue="vanguard@gmail.com" />
                     </Form.Group>
                     <Form.Group className="mb-3">
                       <Form.Label>Phone</Form.Label>
-                      <Form.Control type="tel" defaultValue="+1-555-0123" />
+                      <Form.Control type="tel" defaultValue="+84 909 090 909" />
                     </Form.Group>
                     <Button variant="success">Save Changes</Button>
                   </Form>

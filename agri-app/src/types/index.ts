@@ -36,15 +36,12 @@ export interface Product {
 }
 
 export type ProductCategory = 
-  | 'fruits'
-  | 'vegetables'
-  | 'grains'
-  | 'dairy'
-  | 'livestock'
-  | 'organic'
-  | 'seasonal'
-  | 'herbs'
-  | 'nuts';
+  | 'thực phẩm'
+  | 'đặc sản khô'
+  | 'thảo dược'
+  | 'đồ gia dụng'
+  | 'trái cây'
+  | 'sản phẩm tái chế';
 
 export interface CartItem {
   productId: string;

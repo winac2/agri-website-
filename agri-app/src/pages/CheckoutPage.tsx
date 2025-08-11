@@ -1,21 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
 const CheckoutPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    cardNumber: '',
-    expiryDate: '',
-    cvv: '',
-    promoCode: ''
-  });
+  // Form data state will be implemented when backend is connected
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

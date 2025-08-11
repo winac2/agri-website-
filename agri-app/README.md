@@ -76,22 +76,26 @@ Farm to Tech is a comprehensive agricultural marketplace that bridges the gap be
 ## 📁 Project Structure
 
 ```
-agri-app/
-├── public/                 # Static assets
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── layout/        # Layout components (Navbar, Footer)
-│   │   └── ui/            # UI components
-│   ├── data/              # Mock data and API services
-│   ├── pages/             # Page components
-│   ├── types/             # TypeScript type definitions
-│   ├── utils/             # Utility functions and contexts
-│   ├── App.tsx           # Main application component
-│   ├── main.tsx          # Application entry point
-│   └── style.css         # Global styles
-├── package.json           # Dependencies and scripts
-├── tsconfig.json         # TypeScript configuration
-└── vite.config.ts        # Vite configuration
+attempt2/                    # Repository root
+├── package.json            # Root package.json for deployment
+├── railway.json            # Railway deployment configuration
+├── agri-app/               # Main application directory
+│   ├── public/             # Static assets
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   │   ├── layout/    # Layout components (Navbar, Footer)
+│   │   │   └── ui/        # UI components
+│   │   ├── data/          # Mock data and API services
+│   │   ├── pages/         # Page components
+│   │   ├── types/         # TypeScript type definitions
+│   │   ├── utils/         # Utility functions and contexts
+│   │   ├── App.tsx       # Main application component
+│   │   ├── main.tsx      # Application entry point
+│   │   └── style.css     # Global styles
+│   ├── package.json       # Application dependencies and scripts
+│   ├── tsconfig.json     # TypeScript configuration
+│   └── vite.config.ts    # Vite configuration
+└── README.md              # This file
 ```
 
 ## 🎯 Key Pages
@@ -149,6 +153,73 @@ Bootstrap 5 grid system ensures consistent layout across all device sizes.
 - Protected routes for authenticated users
 - Input sanitization
 
+## 🚨 Troubleshooting
+
+### Common Deployment Issues
+
+#### Railway "Missing script: dev" Error
+If you encounter this error when deploying to Railway:
+
+1. **Check your package.json** - Ensure the "dev" script exists:
+   ```json
+   {
+     "scripts": {
+       "dev": "vite",
+       "build": "tsc && vite build",
+       "preview": "vite preview"
+     }
+   }
+   ```
+
+2. **Use correct start command** - For Railway, use:
+   - Build Command: `npm run build`
+   - Start Command: `npm run preview`
+
+3. **Alternative start command** - If preview doesn't work, try:
+   ```bash
+   npx vite preview --host 0.0.0.0 --port $PORT
+   ```
+
+#### Port Configuration Issues
+- Ensure your application listens on the correct port
+- Railway provides a `PORT` environment variable
+- Update your vite.config.ts if needed:
+  ```typescript
+  export default defineConfig({
+    plugins: [react()],
+    server: {
+      port: process.env.PORT || 3000,
+      host: '0.0.0.0'
+    }
+  })
+  ```
+
+#### Subdirectory Deployment Issues
+If your application is in a subdirectory (like `agri-app/`):
+
+1. **Root package.json** - Ensure you have a root `package.json` with scripts:
+   ```json
+   {
+     "scripts": {
+       "build": "cd agri-app && npm install && npm run build",
+       "start": "cd agri-app && npm run preview"
+     }
+   }
+   ```
+
+2. **Railway configuration** - Use the root scripts in `railway.json`:
+   ```json
+   {
+     "deploy": {
+       "startCommand": "npm start"
+     }
+   }
+   ```
+
+3. **Alternative approach** - If the above doesn't work, try:
+   - Set build command: `cd agri-app && npm install && npm run build`
+   - Set start command: `cd agri-app && npm run preview`
+
 ## 🚀 Deployment
 
 ### Build for Production
@@ -157,6 +228,19 @@ npm run build
 ```
 
 ### Deploy Options
+
+#### Railway Deployment
+1. **Connect your repository** to Railway
+2. **The configuration files** will automatically handle the subdirectory structure:
+   - `railway.json` - Specifies `npm start` as the start command
+   - Root `package.json` - Contains scripts that navigate to `agri-app` folder
+   - Build command: `npm run build` (automatically runs `cd agri-app && npm run build`)
+   - Start command: `npm start` (automatically runs `cd agri-app && npm run preview`)
+3. **Add environment variables** (if needed):
+   - `NODE_ENV=production`
+   - `PORT=3000`
+
+#### Other Deployment Options
 - **Netlify**: Drag and drop the `dist` folder
 - **Vercel**: Connect your GitHub repository
 - **AWS S3**: Upload build files to S3 bucket

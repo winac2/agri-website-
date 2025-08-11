@@ -203,9 +203,9 @@ const ProductDetailPage: React.FC = () => {
                       <Card.Title className="h6">{relatedProduct.name}</Card.Title>
                       <div className="d-flex justify-content-between align-items-center">
                         <span className="text-success">${relatedProduct.price}</span>
-                        <Button as={Link} to={`/product/${relatedProduct.id}`} variant="outline-success" size="sm">
+                        <Link to={`/product/${relatedProduct.id}`} className="btn btn-outline-success btn-sm text-decoration-none">
                           View
-                        </Button>
+                        </Link>
                       </div>
                     </Card.Body>
                   </Card>

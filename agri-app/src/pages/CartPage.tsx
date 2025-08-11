@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Card, Button, Form, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { mockProducts } from '../data/mockData';
 
 const CartPage: React.FC = () => {
@@ -25,9 +25,9 @@ const CartPage: React.FC = () => {
           <Card.Body>
             <h3>Your cart is empty</h3>
             <p className="text-muted">Add some products to get started!</p>
-            <Button as={Link} to="/" variant="success">
+            <Link to="/" className="btn btn-success text-decoration-none">
               Continue Shopping
-            </Button>
+            </Link>
           </Card.Body>
         </Card>
       ) : (
@@ -74,9 +74,9 @@ const CartPage: React.FC = () => {
             ))}
             
             <div className="d-flex justify-content-between mt-4">
-              <Button as={Link} to="/" variant="outline-secondary">
+              <Link to="/" className="btn btn-outline-secondary text-decoration-none">
                 Continue Shopping
-              </Button>
+              </Link>
               <Button variant="outline-success">
                 Update Cart
               </Button>
@@ -118,9 +118,9 @@ const CartPage: React.FC = () => {
                   </div>
                 </Form.Group>
                 
-                <Button as={Link} to="/checkout" variant="success" size="lg" className="w-100">
+                <Link to="/checkout" className="btn btn-success btn-lg w-100 text-decoration-none">
                   Proceed to Checkout
-                </Button>
+                </Link>
                 
                 <div className="text-center mt-3">
                   <small className="text-muted">

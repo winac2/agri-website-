@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  // Form data state will be implemented when backend is connected
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

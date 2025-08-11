@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Table, Form, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Table, Badge } from 'react-bootstrap';
 import { mockProducts } from '../data/mockData';
 
 const FarmerDashboardPage: React.FC = () => {

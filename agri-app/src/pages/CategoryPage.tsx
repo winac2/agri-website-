@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Row, Col, Card, Badge, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import { mockProducts } from '../data/mockData';
 
 const CategoryPage: React.FC = () => {
@@ -28,7 +28,7 @@ const CategoryPage: React.FC = () => {
       <div className="mb-4">
         <h1 className="fw-bold">{getCategoryDisplayName(category)}</h1>
         <p className="text-muted">
-          {categoryProducts.length} products found in {getCategoryDisplayName(category)}
+          {categoryProducts.length} sản phẩm trong {getCategoryDisplayName(category)}
         </p>
       </div>
 
@@ -73,7 +73,7 @@ const CategoryPage: React.FC = () => {
                     {product.description.substring(0, 80)}...
                   </Card.Text>
                   <div className="mb-2">
-                    <span className="text-success fw-bold">${product.price}</span>
+                    <span className="text-success fw-bold">{product.price},000 VNĐ</span>
                     <span className="text-muted ms-2">per {product.unit}</span>
                   </div>
                   <div className="mb-2">
@@ -87,15 +87,12 @@ const CategoryPage: React.FC = () => {
                     <span className="text-muted ms-1">({product.reviewCount} reviews)</span>
                   </div>
                   <div className="mt-auto">
-                    <Button
-                      as={Link}
+                    <Link
                       to={`/product/${product.id}`}
-                      variant="success"
-                      size="sm"
-                      className="w-100"
+                      className="btn btn-success btn-sm w-100 text-decoration-none"
                     >
                       View Details
-                    </Button>
+                    </Link>
                   </div>
                 </Card.Body>
               </Card>

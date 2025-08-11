@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { LinkProps } from 'react-router-dom';
-import { Container, Row, Col, Card, Button, Badge, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import { mockProducts, mockCategories } from '../data/mockData';
-
-// Fix for react-bootstrap Button 'as' prop with react-router-dom Link
-const LinkButton: React.ForwardRefExoticComponent<LinkProps & React.RefAttributes<HTMLAnchorElement>> = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
-  <Link ref={ref} {...props} />
-));
 
 const HomePage: React.FC = () => {
   const featuredProducts = mockProducts.slice(0, 4);
@@ -26,15 +20,15 @@ const HomePage: React.FC = () => {
               <p className="lead mb-4">
                 {/* Connect directly with local farmers and get fresh, organic produce delivered to your doorstep. 
                 Support sustainable agriculture while enjoying the best quality food. */}
-                content
+                contents
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                <Button as={LinkButton} to="/category/fruits" variant="light" size="lg">
+                <Link to="/category/thuc-pham" className="btn btn-light btn-lg text-decoration-none">
                   Shop Now
-                </Button>
-                <Button as={LinkButton} to="/signup" variant="outline-light" size="lg">
+                </Link>
+                <Link to="/signup" className="btn btn-outline-light btn-lg text-decoration-none">
                   Join as Farmer
-                </Button>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-lg-6 text-center mb-4 mb-lg-0">
@@ -77,9 +71,9 @@ const HomePage: React.FC = () => {
         <Container>
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h2>Featured Products</h2>
-            <Button as={LinkButton} to="/category/fruits" variant="outline-success">
+            <Link to="/category/thuc-pham" className="btn btn-outline-success text-decoration-none">
               View All
-            </Button>
+            </Link>
           </div>
           <Row>
             {featuredProducts.map((product) => (
@@ -118,9 +112,9 @@ const HomePage: React.FC = () => {
                         <span className="h5 mb-0">${product.price}</span>
                         <span className="text-muted small">per {product.unit}</span>
                       </div>
-                      <Button as={LinkButton} to={`/product/${product.id}`} variant="success" size="sm" className="w-100">
+                      <Link to={`/product/${product.id}`} className="btn btn-success btn-sm w-100 text-decoration-none">
                         View Details
-                      </Button>
+                      </Link>
                     </div>
                   </Card.Body>
                 </Card>
@@ -221,12 +215,12 @@ const HomePage: React.FC = () => {
                 Join thousands of customers who are already enjoying fresh, local produce.
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <Button as={LinkButton} to="/signup" variant="light" size="lg">
+                <Link to="/signup" className="btn btn-light btn-lg text-decoration-none">
                   Get Started
-                </Button>
-                <Button as={LinkButton} to="/category/fruits" variant="outline-light" size="lg">
+                </Link>
+                <Link to="/category/thuc-pham" className="btn btn-outline-light btn-lg text-decoration-none">
                   Browse Products
-                </Button>
+                </Link>
               </div>
             </Col>
           </Row>
