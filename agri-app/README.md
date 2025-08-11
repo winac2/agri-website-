@@ -1,6 +1,9 @@
+# Version
+-ver 1.2.0 
+10:02pm 8/11/25
 # Farm to Tech - Agricultural Marketplace
 
-A modern React-based e-commerce platform connecting local farmers with consumers for fresh, organic produce and agricultural products.
+web giúp người nông dân kết nối với người tiêu dùng 
 
 ## 🌱 About
 
