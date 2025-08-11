@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
               <p className="lead mb-4">
                 {/* Connect directly with local farmers and get fresh, organic produce delivered to your doorstep. 
                 Support sustainable agriculture while enjoying the best quality food. */}
-                contents
+                Farm2Tech là nền tảng kết nối nông dân, hợp tác xã và người tiêu dùng thông qua công nghệ, giúp tối ưu sản xuất, phân phối và tiêu thụ nông sản. Chúng tôi mang đến giải pháp quản lý thông minh, truy xuất nguồn gốc minh bạch và kênh bán hàng trực tuyến, góp phần nâng cao giá trị nông sản Việt
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                 <Link to="/category/thuc-pham" className="btn btn-light btn-lg text-decoration-none">
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
         <Container>
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h2>Featured Products</h2>
-            <Link to="/category/thuc-pham" className="btn btn-outline-success text-decoration-none">
+            <Link to="/category/thực phẩm" className="btn btn-outline-success text-decoration-none">
               View All
             </Link>
           </div>
