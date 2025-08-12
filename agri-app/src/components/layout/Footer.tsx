@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
         <Row className="align-items-center">
           <Col md={6}>
             <p className="text-success">
-              © 2025 Farm to tech. All rights reserved.
+              © 2025 Farm to tech. All rights reserved. 1.2.2
             </p>
           </Col>
           <Col md={6} className="text-md-end">
