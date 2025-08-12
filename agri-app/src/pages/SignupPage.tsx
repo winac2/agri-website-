@@ -33,7 +33,7 @@ const SignupPage: React.FC = () => {
     localStorage.setItem('users', JSON.stringify(users));
     login(formData.username);
     setIsLoading(false);
-    navigate('/');
+    navigate('/agri-website-/');
   };
 
   return (
@@ -82,7 +82,7 @@ const SignupPage: React.FC = () => {
                 <div className="text-center">
                   <p className="mb-0">
                     Already have an account?{' '}
-                    <Link to="/login" className="text-decoration-none">
+                    <Link to="/agri-website-/login" className="text-decoration-none">
                       Sign in here
                     </Link>
                   </p>

@@ -80,7 +80,7 @@ const LoginPage: React.FC = () => {
                 <div className="text-center">
                   <p className="mb-0">
                     Don't have an account?{' '}
-                    <Link to="/signup" className="text-decoration-none">
+                    <Link to="/agri-website-/signup" className="text-decoration-none">
                       Sign up here
                     </Link>
                   </p>
