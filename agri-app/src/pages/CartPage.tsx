@@ -25,7 +25,7 @@ const CartPage: React.FC = () => {
           <Card.Body>
             <h3>Your cart is empty</h3>
             <p className="text-muted">Add some products to get started!</p>
-            <Link to="/" className="btn btn-success text-decoration-none">
+            <Link to="/agri-website-/" className="btn btn-success text-decoration-none">
               Continue Shopping
             </Link>
           </Card.Body>
@@ -74,7 +74,7 @@ const CartPage: React.FC = () => {
             ))}
             
             <div className="d-flex justify-content-between mt-4">
-              <Link to="/" className="btn btn-outline-secondary text-decoration-none">
+              <Link to="/agri-website-/" className="btn btn-outline-secondary text-decoration-none">
                 Continue Shopping
               </Link>
               <Button variant="outline-success">
@@ -118,7 +118,7 @@ const CartPage: React.FC = () => {
                   </div>
                 </Form.Group>
                 
-                <Link to="/checkout" className="btn btn-success btn-lg w-100 text-decoration-none">
+                <Link to="/agri-website-/checkout" className="btn btn-success btn-lg w-100 text-decoration-none">
                   Proceed to Checkout
                 </Link>
                 

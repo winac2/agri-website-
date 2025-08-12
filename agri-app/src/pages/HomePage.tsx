@@ -23,10 +23,10 @@ const HomePage: React.FC = () => {
                 Farm2Tech là nền tảng kết nối nông dân, hợp tác xã và người tiêu dùng thông qua công nghệ, giúp tối ưu sản xuất, phân phối và tiêu thụ nông sản. Chúng tôi mang đến giải pháp quản lý thông minh, truy xuất nguồn gốc minh bạch và kênh bán hàng trực tuyến, góp phần nâng cao giá trị nông sản Việt
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                <Link to="/category/thuc-pham" className="btn btn-light btn-lg text-decoration-none">
+                <Link to="/agri-website-/category/thực phẩm" className="btn btn-light btn-lg text-decoration-none">
                   Shop Now
                 </Link>
-                <Link to="/signup" className="btn btn-outline-light btn-lg text-decoration-none">
+                <Link to="/agri-website-/signup" className="btn btn-outline-light btn-lg text-decoration-none">
                   Join as Farmer
                 </Link>
               </div>
@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
           <Row>
             {categories.map((category) => (
               <Col key={category.id} md={4} lg={2} className="mb-4">
-                <Card as={Link} to={`/category/${category.name.toLowerCase()}`} 
+                <Card as={Link} to={`/agri-website-/category/${category.name.toLowerCase()}`} 
                       className="text-decoration-none h-100 text-center border-0 shadow-sm">
                   <Card.Body className="d-flex flex-column justify-content-center">
                     <div className="display-4 mb-3">{category.icon}</div>
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
         <Container>
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h2>Featured Products</h2>
-            <Link to="/category/thực phẩm" className="btn btn-outline-success text-decoration-none">
+            <Link to="/agri-website-/category/thực phẩm" className="btn btn-outline-success text-decoration-none">
               View All
             </Link>
           </div>
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
                         <span className="h5 mb-0">${product.price}</span>
                         <span className="text-muted small">per {product.unit}</span>
                       </div>
-                      <Link to={`/product/${product.id}`} className="btn btn-success btn-sm w-100 text-decoration-none">
+                      <Link to={`/agri-website-/product/${product.id}`} className="btn btn-success btn-sm w-100 text-decoration-none">
                         View Details
                       </Link>
                     </div>
@@ -215,10 +215,10 @@ const HomePage: React.FC = () => {
                 Join thousands of customers who are already enjoying fresh, local produce.
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <Link to="/signup" className="btn btn-light btn-lg text-decoration-none">
+                <Link to="/agri-website-/signup" className="btn btn-light btn-lg text-decoration-none">
                   Get Started
                 </Link>
-                <Link to="/category/thuc-pham" className="btn btn-outline-light btn-lg text-decoration-none">
+                <Link to="/agri-website-/category/thuc-pham" className="btn btn-outline-light btn-lg text-decoration-none">
                   Browse Products
                 </Link>
               </div>

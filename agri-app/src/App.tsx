@@ -20,6 +20,7 @@ import FarmerDashboardPage from './pages/FarmerDashboardPage';
 import ContactPage from './pages/ContactPage';
 import OrderManagementPage from './pages/OrderManagementPage';
 import CategoryPage from './pages/CategoryPage';
+import QRpage from './pages/QRpage';
 
 function App() {
   return (
@@ -29,17 +30,19 @@ function App() {
           <Navbar />
           <main className="flex-grow-1">
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<SignupPage />} />
-              <Route path="/product/:id" element={<ProductDetailPage />} />
-              <Route path="/category/:category" element={<CategoryPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/checkout" element={<CheckoutPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/farmer-dashboard" element={<FarmerDashboardPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/orders" element={<OrderManagementPage />} />
+              <Route path="/agri-website-/" element={<HomePage />} />
+              <Route path="/agri-website-/home" element={<HomePage />} />
+              <Route path="/agri-website-/login" element={<LoginPage />} />
+              <Route path="/agri-website-/signup" element={<SignupPage />} />
+              <Route path="/agri-website-/product/:id" element={<ProductDetailPage />} />
+              <Route path="/agri-website-/category/:category" element={<CategoryPage />} />
+              <Route path="/agri-website-/cart" element={<CartPage />} />
+              <Route path="/agri-website-/checkout" element={<CheckoutPage />} />
+              <Route path="/agri-website-/profile" element={<ProfilePage />} />
+              <Route path="/agri-website-/farmer-dashboard" element={<FarmerDashboardPage />} />
+              <Route path="/agri-website-/contact" element={<ContactPage />} />
+              <Route path="/agri-website-/orders" element={<OrderManagementPage />} />
+              <Route path="/agri-website-/qr" element={<QRpage />} />
             </Routes>
           </main>
           <Footer />

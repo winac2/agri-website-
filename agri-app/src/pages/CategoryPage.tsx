@@ -88,7 +88,7 @@ const CategoryPage: React.FC = () => {
                   </div>
                   <div className="mt-auto">
                     <Link
-                      to={`/product/${product.id}`}
+                      to={`/agri-website-/product/${product.id}`}
                       className="btn btn-success btn-sm w-100 text-decoration-none"
                     >
                       View Details

@@ -16,7 +16,7 @@ const ProductDetailPage: React.FC = () => {
     return (
       <Container className="py-5">
         <Alert variant="warning">
-          Product not found. <Link to="/">Return to home</Link>
+          Product not found. <Link to="/agri-website-/">Return to home</Link>
         </Alert>
       </Container>
     );
@@ -203,7 +203,7 @@ const ProductDetailPage: React.FC = () => {
                       <Card.Title className="h6">{relatedProduct.name}</Card.Title>
                       <div className="d-flex justify-content-between align-items-center">
                         <span className="text-success">${relatedProduct.price}</span>
-                        <Link to={`/product/${relatedProduct.id}`} className="btn btn-outline-success btn-sm text-decoration-none">
+                        <Link to={`/agri-website-/product/${relatedProduct.id}`} className="btn btn-outline-success btn-sm text-decoration-none">
                           View
                         </Link>
                       </div>
