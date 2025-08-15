@@ -16,7 +16,7 @@ const ProductDetailPage: React.FC = () => {
     return (
       <Container className="py-5">
         <Alert variant="warning">
-          Product not found. <Link to="/agri-website-/">Return to home</Link>
+          Không tìm thấy sản phẩm. <Link to="/agri-website-/">Quay về trang chủ</Link>
         </Alert>
       </Container>
     );
@@ -24,12 +24,12 @@ const ProductDetailPage: React.FC = () => {
 
   const handleAddToCart = () => {
     // TODO: Implement cart functionality
-    alert(`Added ${quantity} ${product.unit} of ${product.name} to cart!`);
+    alert(`Đã thêm ${quantity} ${product.unit} ${product.name} vào giỏ hàng!`);
   };
 
   const handleBuyNow = () => {
     // TODO: Implement direct purchase
-    alert('Redirecting to checkout...');
+    alert('Đang chuyển đến trang thanh toán...');
   };
 
   return (
@@ -73,14 +73,14 @@ const ProductDetailPage: React.FC = () => {
           <h1 className="mb-3">{product.name}</h1>
           
           <div className="mb-3">
-            <span className="h3 text-success">${product.price}</span>
-            <span className="text-muted ms-2">per {product.unit}</span>
+            <span className="h3 text-success">{product.price} VNĐ</span>
+            <span className="text-muted ms-2">mỗi {product.unit}</span>
           </div>
           
           <div className="mb-3">
             <span className="text-warning">★</span>
             <span className="ms-1">{product.rating}</span>
-            <span className="text-muted ms-1">({product.reviewCount} reviews)</span>
+            <span className="text-muted ms-1">({product.reviewCount} đánh giá)</span>
           </div>
           
           <p className="text-muted mb-3">by {product.farmerName}</p>
@@ -88,11 +88,11 @@ const ProductDetailPage: React.FC = () => {
           <p className="mb-4">{product.description}</p>
           
           <div className="mb-4">
-            <h6>Product Details:</h6>
+            <h6>Chi Tiết Sản Phẩm:</h6>
             <ul className="list-unstyled">
-              <li><strong>Stock:</strong> {product.stock} {product.unit}</li>
-              <li><strong>Shipping Areas:</strong> {product.shippingArea.join(', ')}</li>
-              <li><strong>Category:</strong> {product.category}</li>
+              <li><strong>Tồn kho:</strong> {product.stock} {product.unit}</li>
+              <li><strong>Khu vực giao hàng:</strong> {product.shippingArea.join(', ')}</li>
+              <li><strong>Danh mục:</strong> {product.category}</li>
             </ul>
           </div>
           
@@ -100,7 +100,7 @@ const ProductDetailPage: React.FC = () => {
             <Row>
               <Col md={6}>
                 <Form.Group>
-                  <Form.Label>Quantity</Form.Label>
+                  <Form.Label>Số Lượng</Form.Label>
                   <Form.Select 
                     value={quantity} 
                     onChange={(e) => setQuantity(Number(e.target.value))}
@@ -113,7 +113,7 @@ const ProductDetailPage: React.FC = () => {
               </Col>
               <Col md={6}>
                 <div className="mt-4">
-                  <strong>Total: ${(product.price * quantity).toFixed(2)}</strong>
+                  <strong>Tổng: {(product.price * quantity).toFixed(0)} VNĐ</strong>
                 </div>
               </Col>
             </Row>
@@ -126,7 +126,7 @@ const ProductDetailPage: React.FC = () => {
               onClick={handleAddToCart}
               className="flex-fill"
             >
-              Add to Cart
+              Thêm Vào Giỏ Hàng
             </Button>
             <Button 
               variant="outline-success" 
@@ -134,14 +134,14 @@ const ProductDetailPage: React.FC = () => {
               onClick={handleBuyNow}
               className="flex-fill"
             >
-              Buy Now
+              Mua Ngay
             </Button>
           </div>
           
           <div className="border-top pt-3">
-            <h6>Shipping Information:</h6>
+            <h6>Thông Tin Vận Chuyển:</h6>
             <p className="text-muted small">
-              Free shipping on orders over $50. Delivery within 24-48 hours to {product.shippingArea.join(', ')}.
+              Miễn phí vận chuyển cho đơn hàng trên 500.000 VNĐ. Giao hàng trong vòng 24-48 giờ đến {product.shippingArea.join(', ')}.
             </p>
           </div>
         </Col>
@@ -150,7 +150,7 @@ const ProductDetailPage: React.FC = () => {
       {/* Reviews Section */}
       <Row className="mt-5">
         <Col>
-          <h3>Customer Reviews</h3>
+          <h3>Đánh Giá Của Khách Hàng</h3>
           {reviews.length > 0 ? (
             reviews.map((review) => (
               <Card key={review.id} className="mb-3">
@@ -173,11 +173,11 @@ const ProductDetailPage: React.FC = () => {
               </Card>
             ))
           ) : (
-            <p className="text-muted">No reviews yet. Be the first to review this product!</p>
+            <p className="text-muted">Chưa có đánh giá nào. Hãy là người đầu tiên đánh giá sản phẩm này!</p>
           )}
           
           <Button variant="outline-success" className="mt-3">
-            Write a Review
+            Viết Đánh Giá
           </Button>
         </Col>
       </Row>
@@ -185,7 +185,7 @@ const ProductDetailPage: React.FC = () => {
       {/* Related Products */}
       <Row className="mt-5">
         <Col>
-          <h3>You Might Also Like</h3>
+          <h3>Bạn Có Thể Thích</h3>
           <Row>
             {mockProducts
               .filter(p => p.id !== product.id && p.category === product.category)
@@ -202,9 +202,9 @@ const ProductDetailPage: React.FC = () => {
                     <Card.Body>
                       <Card.Title className="h6">{relatedProduct.name}</Card.Title>
                       <div className="d-flex justify-content-between align-items-center">
-                        <span className="text-success">${relatedProduct.price}</span>
+                        <span className="text-success">{relatedProduct.price} VNĐ</span>
                         <Link to={`/agri-website-/product/${relatedProduct.id}`} className="btn btn-outline-success btn-sm text-decoration-none">
-                          View
+                          Xem
                         </Link>
                       </div>
                     </Card.Body>

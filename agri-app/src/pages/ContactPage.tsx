@@ -6,25 +6,25 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Message sent successfully!');
+    alert('Tin nhắn đã được gửi thành công!');
   };
 
   return (
     <Container className="py-5">
-      <h1 className="text-center mb-5">Contact Us</h1>
+      <h1 className="text-center mb-5">Liên Hệ Chúng Tôi</h1>
       
       <Row>
         <Col lg={8}>
           <Card>
             <Card.Header>
-              <h5 className="mb-0">Send us a Message</h5>
+              <h5 className="mb-0">Gửi Tin Nhắn Cho Chúng Tôi</h5>
             </Card.Header>
             <Card.Body>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Name</Form.Label>
+                      <Form.Label>Họ Tên</Form.Label>
                       <Form.Control type="text" required />
                     </Form.Group>
                   </Col>
@@ -36,15 +36,15 @@ const ContactPage: React.FC = () => {
                   </Col>
                 </Row>
                 <Form.Group className="mb-3">
-                  <Form.Label>Subject</Form.Label>
+                                        <Form.Label>Tiêu Đề</Form.Label>
                   <Form.Control type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Message</Form.Label>
+                  <Form.Label>Tin Nhắn</Form.Label>
                   <Form.Control as="textarea" rows={5} required />
                 </Form.Group>
                 <Button type="submit" variant="success">
-                  Send Message
+                  Gửi Tin Nhắn
                 </Button>
               </Form>
             </Card.Body>
@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
         <Col lg={4}>
           <Card className="mb-4">
             <Card.Header>
-              <h5 className="mb-0">Contact Information</h5>
+              <h5 className="mb-0">Thông Tin Liên Hệ</h5>
             </Card.Header>
             <Card.Body>
               <div className="mb-3">
@@ -62,36 +62,36 @@ const ContactPage: React.FC = () => {
                 <p className="mb-0">support@farmtotech.com</p>
               </div>
               <div className="mb-3">
-                <h6>📞 Phone</h6>
+                <h6>📞 Điện Thoại</h6>
                 <p className="mb-0">+84 382 705 884</p>
               </div>
               <div className="mb-3">
-                <h6>📍 Address</h6>
+                <h6>📍 Địa Chỉ</h6>
                 <p className="mb-0">address APT<br />Quy Nhon, Binh Dinh</p>
               </div>
               <div>
-                <h6>🕒 Hours</h6>
-                <p className="mb-0">Monday - Saturday: 8AM - 5PM<br />Sunday: 8AM - 11AM</p>
+                <h6>🕒 Giờ Làm Việc</h6>
+                <p className="mb-0">Thứ 2 - Thứ 7: 8:00 - 17:00<br />Chủ nhật: 8:00 - 11:00</p>
               </div>
             </Card.Body>
           </Card>
           
           <Card>
             <Card.Header>
-              <h5 className="mb-0">FAQ</h5>
+              <h5 className="mb-0">Câu Hỏi Thường Gặp</h5>
             </Card.Header>
             <Card.Body>
               <div className="mb-3">
-                <h6>How do I place an order?</h6>
-                <p className="small text-muted">Browse products, add to cart, and checkout with your payment information.</p>
+                <h6>Làm thế nào để đặt hàng?</h6>
+                <p className="small text-muted">Duyệt sản phẩm, thêm vào giỏ hàng và thanh toán với thông tin thanh toán của bạn.</p>
               </div>
               <div className="mb-3">
-                <h6>What are your shipping policies?</h6>
-                <p className="small text-muted">Free shipping on orders over $50. Delivery within 24-48 hours.</p>
+                <h6>Chính sách vận chuyển của bạn là gì?</h6>
+                <p className="small text-muted">Miễn phí vận chuyển cho đơn hàng trên 500.000 VNĐ. Giao hàng trong vòng 24-48 giờ.</p>
               </div>
               <div>
-                <h6>How do I become a farmer?</h6>
-                <p className="small text-muted">Sign up as a farmer and submit your farm information for approval.</p>
+                <h6>Làm thế nào để trở thành nông dân?</h6>
+                <p className="small text-muted">Đăng ký làm nông dân và gửi thông tin nông trại để được phê duyệt.</p>
               </div>
             </Card.Body>
           </Card>

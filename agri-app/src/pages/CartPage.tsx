@@ -13,20 +13,20 @@ const CartPage: React.FC = () => {
   const [promoCode, setPromoCode] = useState('');
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
-  const shipping = subtotal > 50 ? 0 : 5.99;
+  const shipping = subtotal > 500000 ? 0 : 30000;
   const total = subtotal + shipping;
 
   return (
     <Container className="py-5">
-      <h1 className="mb-4">Shopping Cart</h1>
+      <h1 className="mb-4">Giỏ Hàng</h1>
       
       {cartItems.length === 0 ? (
         <Card className="text-center py-5">
           <Card.Body>
-            <h3>Your cart is empty</h3>
-            <p className="text-muted">Add some products to get started!</p>
+            <h3>Giỏ hàng của bạn trống</h3>
+            <p className="text-muted">Thêm một số sản phẩm để bắt đầu!</p>
             <Link to="/agri-website-/" className="btn btn-success text-decoration-none">
-              Continue Shopping
+              Tiếp Tục Mua Sắm
             </Link>
           </Card.Body>
         </Card>
@@ -48,7 +48,7 @@ const CartPage: React.FC = () => {
                     <Col md={4}>
                       <h6>{item.product.name}</h6>
                       <p className="text-muted small">by {item.product.farmerName}</p>
-                      <span className="text-success">${item.product.price} per {item.product.unit}</span>
+                      <span className="text-success">{item.product.price} VNĐ mỗi {item.product.unit}</span>
                     </Col>
                     <Col md={2}>
                       <Form.Select 
@@ -61,11 +61,11 @@ const CartPage: React.FC = () => {
                       </Form.Select>
                     </Col>
                     <Col md={2}>
-                      <span className="h6">${(item.product.price * item.quantity).toFixed(2)}</span>
+                      <span className="h6">{(item.product.price * item.quantity).toFixed(0)} VNĐ</span>
                     </Col>
                     <Col md={2}>
                       <Button variant="outline-danger" size="sm">
-                        Remove
+                        Xóa
                       </Button>
                     </Col>
                   </Row>
@@ -75,10 +75,10 @@ const CartPage: React.FC = () => {
             
             <div className="d-flex justify-content-between mt-4">
               <Link to="/agri-website-/" className="btn btn-outline-secondary text-decoration-none">
-                Continue Shopping
+                Tiếp Tục Mua Sắm
               </Link>
               <Button variant="outline-success">
-                Update Cart
+                Cập Nhật Giỏ Hàng
               </Button>
             </div>
           </Col>
@@ -86,45 +86,45 @@ const CartPage: React.FC = () => {
           <Col lg={4}>
             <Card>
               <Card.Header>
-                <h5 className="mb-0">Order Summary</h5>
+                <h5 className="mb-0">Tóm Tắt Đơn Hàng</h5>
               </Card.Header>
               <Card.Body>
                 <div className="d-flex justify-content-between mb-2">
-                  <span>Subtotal ({cartItems.length} items):</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>Tạm tính ({cartItems.length} sản phẩm):</span>
+                  <span>{subtotal.toFixed(0)} VNĐ</span>
                 </div>
                 <div className="d-flex justify-content-between mb-2">
-                  <span>Shipping:</span>
-                  <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                  <span>Phí vận chuyển:</span>
+                  <span>{shipping === 0 ? 'Miễn phí' : `${shipping.toFixed(0)} VNĐ`}</span>
                 </div>
                 <hr />
                 <div className="d-flex justify-content-between mb-3">
-                  <strong>Total:</strong>
-                  <strong className="text-success">${total.toFixed(2)}</strong>
+                  <strong>Tổng cộng:</strong>
+                  <strong className="text-success">{total.toFixed(0)} VNĐ</strong>
                 </div>
                 
                 <Form.Group className="mb-3">
-                  <Form.Label>Promo Code</Form.Label>
+                  <Form.Label>Mã Giảm Giá</Form.Label>
                   <div className="d-flex">
                     <Form.Control
                       type="text"
-                      placeholder="Enter code"
+                      placeholder="Nhập mã"
                       value={promoCode}
                       onChange={(e) => setPromoCode(e.target.value)}
                     />
                     <Button variant="outline-secondary" className="ms-2">
-                      Apply
+                      Áp Dụng
                     </Button>
                   </div>
                 </Form.Group>
                 
                 <Link to="/agri-website-/checkout" className="btn btn-success btn-lg w-100 text-decoration-none">
-                  Proceed to Checkout
+                  Tiến Hành Thanh Toán
                 </Link>
                 
                 <div className="text-center mt-3">
                   <small className="text-muted">
-                    Free shipping on orders over $50
+                    Miễn phí vận chuyển cho đơn hàng trên 500.000 VNĐ
                   </small>
                 </div>
               </Card.Body>

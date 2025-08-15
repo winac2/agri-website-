@@ -37,7 +37,7 @@ export interface Product {
 
 export type ProductCategory = 
   | 'thực phẩm'
-  | 'đặc sản khô'
+  | 'phụ phẩm'
   | 'thảo dược'
   | 'đồ gia dụng'
   | 'trái cây'

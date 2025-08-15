@@ -18,7 +18,7 @@ const CategoryPage: React.FC = () => {
   if (!category) {
     return (
       <Container className="py-5">
-        <h2>Category not found</h2>
+        <h2>Không tìm thấy danh mục</h2>
       </Container>
     );
   }
@@ -34,8 +34,8 @@ const CategoryPage: React.FC = () => {
 
       {categoryProducts.length === 0 ? (
         <div className="text-center py-5">
-          <h3>No products found in this category</h3>
-          <p className="text-muted">Check back later for new products!</p>
+          <h3>Không tìm thấy sản phẩm nào trong danh mục này</h3>
+          <p className="text-muted">Hãy quay lại sau để xem sản phẩm mới!</p>
         </div>
       ) : (
         <Row>
@@ -73,8 +73,8 @@ const CategoryPage: React.FC = () => {
                     {product.description.substring(0, 80)}...
                   </Card.Text>
                   <div className="mb-2">
-                    <span className="text-success fw-bold">{product.price},000 VNĐ</span>
-                    <span className="text-muted ms-2">per {product.unit}</span>
+                    <span className="text-success fw-bold">{product.price} VNĐ</span>
+                    <span className="text-muted ms-2">mỗi {product.unit}</span>
                   </div>
                   <div className="mb-2">
                     <small className="text-muted">
@@ -84,14 +84,14 @@ const CategoryPage: React.FC = () => {
                   <div className="mb-3">
                     <span className="text-warning">★</span>
                     <span className="ms-1">{product.rating}</span>
-                    <span className="text-muted ms-1">({product.reviewCount} reviews)</span>
+                    <span className="text-muted ms-1">({product.reviewCount} đánh giá)</span>
                   </div>
                   <div className="mt-auto">
                     <Link
                       to={`/agri-website-/product/${product.id}`}
                       className="btn btn-success btn-sm w-100 text-decoration-none"
                     >
-                      View Details
+                      Xem Chi Tiết
                     </Link>
                   </div>
                 </Card.Body>

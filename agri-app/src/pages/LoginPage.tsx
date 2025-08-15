@@ -25,7 +25,7 @@ const LoginPage: React.FC = () => {
     // Check user from localStorage
     const users = JSON.parse(localStorage.getItem('users') || '{}');
     if (!users[formData.username] || users[formData.username].password !== formData.password) {
-      setError('Invalid username or password');
+      setError('Tên đăng nhập hoặc mật khẩu không hợp lệ');
       setIsLoading(false);
       return;
     }
@@ -41,30 +41,30 @@ const LoginPage: React.FC = () => {
           <Card className="border-0 shadow">
             <Card.Body className="p-5">
               <div className="text-center mb-4">
-                <h2 className="fw-bold">Welcome Back</h2>
-                <p className="text-muted">Sign in to your account</p>
+                <h2 className="fw-bold">Chào Mừng Trở Lại</h2>
+                <p className="text-muted">Đăng nhập vào tài khoản của bạn</p>
               </div>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Username</Form.Label>
+                  <Form.Label>Tên Đăng Nhập</Form.Label>
                   <Form.Control
                     type="text"
                     name="username"
                     value={formData.username}
                     onChange={handleChange}
-                    placeholder="Enter your username"
+                    placeholder="Nhập tên đăng nhập"
                     required
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label>Mật Khẩu</Form.Label>
                   <Form.Control
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    placeholder="Enter your password"
+                    placeholder="Nhập mật khẩu"
                     required
                   />
                 </Form.Group>
@@ -75,13 +75,13 @@ const LoginPage: React.FC = () => {
                   className="w-100 mb-3"
                   disabled={isLoading}
                 >
-                  {isLoading ? 'Signing in...' : 'Sign In'}
+                  {isLoading ? 'Đang đăng nhập...' : 'Đăng Nhập'}
                 </Button>
                 <div className="text-center">
                   <p className="mb-0">
-                    Don't have an account?{' '}
+                    Chưa có tài khoản?{' '}
                     <Link to="/agri-website-/signup" className="text-decoration-none">
-                      Sign up here
+                      Đăng ký tại đây
                     </Link>
                   </p>
                 </div>

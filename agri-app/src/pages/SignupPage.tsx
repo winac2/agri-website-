@@ -25,7 +25,7 @@ const SignupPage: React.FC = () => {
     // Save user to localStorage
     const users = JSON.parse(localStorage.getItem('users') || '{}');
     if (users[formData.username]) {
-      setError('Username already exists');
+      setError('Tên đăng nhập đã tồn tại');
       setIsLoading(false);
       return;
     }
@@ -43,30 +43,30 @@ const SignupPage: React.FC = () => {
           <Card className="border-0 shadow">
             <Card.Body className="p-5">
               <div className="text-center mb-4">
-                <h2 className="fw-bold">Sign Up</h2>
-                <p className="text-muted">Create your account</p>
+                <h2 className="fw-bold">Đăng Ký</h2>
+                <p className="text-muted">Tạo tài khoản của bạn</p>
               </div>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Username</Form.Label>
+                  <Form.Label>Tên Đăng Nhập</Form.Label>
                   <Form.Control
                     type="text"
                     name="username"
                     value={formData.username}
                     onChange={handleChange}
-                    placeholder="Enter your username"
+                    placeholder="Nhập tên đăng nhập"
                     required
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label>Mật Khẩu</Form.Label>
                   <Form.Control
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    placeholder="Enter your password"
+                    placeholder="Nhập mật khẩu"
                     required
                   />
                 </Form.Group>
@@ -77,13 +77,13 @@ const SignupPage: React.FC = () => {
                   className="w-100 mb-3"
                   disabled={isLoading}
                 >
-                  {isLoading ? 'Creating Account...' : 'Create Account'}
+                  {isLoading ? 'Đang tạo tài khoản...' : 'Tạo Tài Khoản'}
                 </Button>
                 <div className="text-center">
                   <p className="mb-0">
-                    Already have an account?{' '}
+                    Đã có tài khoản?{' '}
                     <Link to="/agri-website-/login" className="text-decoration-none">
-                      Sign in here
+                      Đăng nhập tại đây
                     </Link>
                   </p>
                 </div>

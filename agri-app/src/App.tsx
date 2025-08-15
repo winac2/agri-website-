@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { AuthProvider } from './utils/AuthContext';
+import { LanguageProvider } from './utils/LanguageContext';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -24,31 +25,34 @@ import QRpage from './pages/QRpage';
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <div className="App d-flex flex-column min-vh-100">
-          <Navbar />
-          <main className="flex-grow-1">
-            <Routes>
-              <Route path="/agri-website-/" element={<HomePage />} />
-              <Route path="/agri-website-/home" element={<HomePage />} />
-              <Route path="/agri-website-/login" element={<LoginPage />} />
-              <Route path="/agri-website-/signup" element={<SignupPage />} />
-              <Route path="/agri-website-/product/:id" element={<ProductDetailPage />} />
-              <Route path="/agri-website-/category/:category" element={<CategoryPage />} />
-              <Route path="/agri-website-/cart" element={<CartPage />} />
-              <Route path="/agri-website-/checkout" element={<CheckoutPage />} />
-              <Route path="/agri-website-/profile" element={<ProfilePage />} />
-              <Route path="/agri-website-/farmer-dashboard" element={<FarmerDashboardPage />} />
-              <Route path="/agri-website-/contact" element={<ContactPage />} />
-              <Route path="/agri-website-/orders" element={<OrderManagementPage />} />
-              <Route path="/agri-website-/qr" element={<QRpage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </AuthProvider>
+    <LanguageProvider>
+      <AuthProvider>
+        <Router>
+          <div className="App d-flex flex-column min-vh-100">
+            <Navbar />
+            <main className="flex-grow-1">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/agri-website-/" element={<HomePage />} />
+                <Route path="/agri-website-/home" element={<HomePage />} />
+                <Route path="/agri-website-/login" element={<LoginPage />} />
+                <Route path="/agri-website-/signup" element={<SignupPage />} />
+                <Route path="/agri-website-/product/:id" element={<ProductDetailPage />} />
+                <Route path="/agri-website-/category/:category" element={<CategoryPage />} />
+                <Route path="/agri-website-/cart" element={<CartPage />} />
+                <Route path="/agri-website-/checkout" element={<CheckoutPage />} />
+                <Route path="/agri-website-/profile" element={<ProfilePage />} />
+                <Route path="/agri-website-/farmer-dashboard" element={<FarmerDashboardPage />} />
+                <Route path="/agri-website-/contact" element={<ContactPage />} />
+                <Route path="/agri-website-/orders" element={<OrderManagementPage />} />
+                <Route path="/agri-website-/qr" element={<QRpage />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </AuthProvider>
+    </LanguageProvider>
   );
 }
 
