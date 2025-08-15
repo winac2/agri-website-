@@ -23,27 +23,27 @@ const Footer: React.FC = () => {
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Quick Links</h6>
             <ul className="list-unstyled">
-              <li><Link to="/agri-website-/" className="text-success">Home</Link></li>
-              <li><Link to="/agri-website-/category/thuc-pham" className="text-success">Thực phẩm</Link></li>
-              <li><Link to="/agri-website-/category/trai-cay" className="text-success">Trái cây</Link></li>
-              <li><Link to="/agri-website-/category/dac-san-kho" className="text-success">Đặc sản khô</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Home</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Thực phẩm</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Trái cây</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Đặc sản khô</Link></li>
             </ul>
           </Col>
           
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Account</h6>
             <ul className="list-unstyled">
-              <li><Link to="/agri-website-/login" className="text-success">Login</Link></li>
-              <li><Link to="/agri-website-/signup" className="text-success">Sign Up</Link></li>
-              <li><Link to="/agri-website-/profile" className="text-success">Profile</Link></li>
-              <li><Link to="/agri-website-/orders" className="text-success">Orders</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Login</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Sign Up</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Profile</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Orders</Link></li>
             </ul>
           </Col>
           
           <Col md={2} className="mb-4">
             <h6 className="mb-3">Support</h6>
             <ul className="list-unstyled">
-              <li><Link to="/agri-website-/contact" className="text-success">Contact Us</Link></li>
+              <li><Link to="https://winac2.github.io/agri-website-/" className="text-success">Contact Us</Link></li>
               <li><a href="#" className="text-success">Help Center</a></li>
               <li><a href="#" className="text-success">Shipping Info</a></li>
               <li><a href="#" className="text-success">Returns</a></li>
